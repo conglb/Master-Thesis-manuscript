@@ -1,0 +1,68 @@
+
+
+\chapter{Scope of Research and Requirements} \label{chap:scope}
+
+
+\section{Scope of Research}
+This research concerns with exploring the concept and developing a data-processing framework specifically tailored for maritime operational time-series data.
+For a thesis project, some aspects and sub-topics are chosen from list to dive in depth as below:
+\begin{itemize}
+    \item \textbf{A Modular and Scalable Data-processing Framework} \\
+     Ensuring the designed framework is modular, capable of scaling out for different vessel types, operational complexities.
+    \item \textbf{Research a Database Schema for OVD} \\
+    A comprehensive investigation on storing static and operational vessels data in a unified SQL database, tailored to handle the time-series nature of the data.
+    \item \textbf{Interactive Dashboards} \\
+    Web-based dashboards that allow analysts to explore and find insights in historical vessels data through an intuitive interface.
+    \item \textbf{Run on-premise but cloud-ready} \\
+    The framework should be prepared to be deployed on cloud with little hardship in case of big data processing.
+\end{itemize} 
+
+\section{Limitations of Research}
+To focus on research targets, certain aspects and sub-topics will not be delved into, which we will discuss them in Future Work section of this thesis.
+Followings are the research's limitations:
+\begin{itemize}
+    \item \textbf{Lower-layer solutions } 
+    The thesis will not cover technical details how on-board data is transmitted and encoded/decoded by stations, fleet companies. The work of the thesis belongs to a high layer in the ecosystem.
+    \item \textbf{Geographical coverage} 
+    Operational maritime data available for this thesis is limited and biased to specific geographical regions, vessels, where operational data has been archived and open for access. 
+    %The study will focus on these subjects, and findings may not be directly applicable to areas outside this scope.
+    %\item \textbf{Dashboard is specific} The purpose of each analysis varies. So my dashboard serves only specific stakeholders. For other specific analysis, people can create their own customized dashboards.
+    \item \textbf{Big data} Handling time-series big data from thousands vessels may require cluster computing and distributed system.
+\end{itemize} 
+
+\section{Requirements}
+
+\mtd{where does the requirement come from?}
+\mtd{requirement for the whole big project? write more big?}
+To specify what the thesis implement, this section lists technical and functional requirements of the software which is developed for the framework. The requirements is collected after considering aspects from perspectives of researchers, data analytics, and data engineer in the fields of computer science and ship design \mtd{improve}.
+\subsection{Functional requirements}
+
+Functional requirement defines features of the software built for the framework. 
+This software contains five main components: data collector, data cleanser, data integrator, data computer and data presenter. The functional requirements for each component are outlined below:
+\mtd{improve}
+%it means that these features will be designed and implemented in the thesis work.
+\begin{itemize}
+    \item {Data Collector component}:
+     gathers OVD periodically from various sources (eg,. databases, cloud services, data stream) and finally save them to the hard disk under CSV format.
+     \item {Data Cleaner component}: 
+     enable users to convert raw and noisy AIS data, engine data, fuel consumption data... into clean data according to their cleaning procedures.
+     \item Data Integrator component:
+    integrates multiple cleaned datasets into a database with a unified schema, free from duplications or inconsistencies.
+     \item Data Computer component: this component transforms, enriches and normalizes cleaned data into valuable information. In addition, the cleaned data will also be used for training predictive models. 
+     \item Data Presenter component: consists of interactive dashboards facilitating data analysis (eg., filter data by sailing area, seasons, navigational status, filter data, select specific metrics). In terms of visualization, dashboards have to show information in a intuitive way and well-organized. 
+%     \item{Component should be encapsulated in containers, which eases deployment and scaling up.}
+\end{itemize} 
+\subsection{Nonfunctional requirements}
+
+The software, which is implemented in this thesis, is expected to meet the following qualities:
+\begin{itemize}
+     \item {Encapsulation}: each components (data collector, data cleaner, data integrator, data computer, and data presenter) must be encapsulated and containerized using Docker, ensuring deployment across different environments, including potential cloud platforms.
+     \item {Re-usability}: The software provides reusable exemplary scripts that can be easily adjusted for user's specific business and research applications. For example, the data collecting/cleaning script can be reused for a new data source with a few adjustment.
+     \item {Extendablility:} 
+     The software can be easily customized, allowing the developer to extend or modify, for example adding new fields to the database schema when an external dataset needs to be ingested.
+     %\item {Performance}: comparing between InfluxDB and TimescaleDB for the use case of OVD
+\end{itemize} 
+
+
+
+

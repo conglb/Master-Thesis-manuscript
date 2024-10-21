@@ -1,0 +1,22 @@
+\begin{table}[H]
+\caption{Draft of popular data-quality issues in OVD}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{|l|l|l|} \hline 
+
+\textbf{Category}& \textbf{Error}& \textbf{Example} \\ \hline  
+\begin{tabular}[c]{@{}l@{}C}Column-related errors\end{tabular}& wrong column names & Compare with provided headers \\ \hline  
+& wrong column data type& Convert data based on provided headers \\ \hline  
+ & wrong column data format&edit the column values\\ \hline 
+ & &\\ \hline 
+Row-related errors & missing row & \begin{tabular}[c]{@{}l@{}}Depends on the requirements: \\ ignore, or mark for post processing\end{tabular} \\ \hline  
+ & duplicated row & Detect duplication and remove on needed \\ \hline  
+ & consecutive rows are inconsistent & Detect by comparison and -remove/edit \\ \hline 
+ & &\\\hline 
+\begin{tabular}[c]{@{}l@{}}Corrupted\\ cell's content\end{tabular} & NaN, null, Unknown values & Depends on requirements: remove rows, or mark. \\ \hline  
+ & miss-typed values & Replace with the correct values or remove that row \\ \hline  
+ & outlier values: too high, to low values & Remove that row \\ \hline  
+ & wrong timestamp & Remove that row\\ \hline
+ & &\\ \hline 
+\end{tabular}
+}
+\end{table}

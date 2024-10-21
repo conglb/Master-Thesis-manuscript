@@ -1,0 +1,61 @@
+\chapter{Introduction}\label{chap:Intro}
+
+
+
+\section{Background and Motivation}
+% \mtd{1 page in total \\}
+% \mtd{1 para to describe what is the current situation: how is the intersection between marine industry and digitization, the state of marine data management. (big picture) \\
+% 2 para what is the short coming, imperfect things, challenges related to data collection, storage, and analysis in marine operations. \\
+% - 1 para about frameworks in maritime.\\
+% - 1 para identify any gaps or inefficiencies in current systems that your work aims to address.\\
+% 1 para what is your solution to fill in the gaps\\
+% }
+
+Advances in shipbuilding, engine technology and navigation over the centuries have expanded global trade, making maritime transport indispensable. 
+%This is driven by the increasing global demand for shipping worldwide and the requirement of cost optimization and reducing footprint. 
+In recent decades, digitization has emerged as a key development in marine shipping, reshaping the maritime industry to meet the growing volume of goods, the need for cost-efficient operations and the demand for reducing environmental impact.
+Nowadays, many decisions in marine industry are driven by data analytics from on-board data, which has proved the value of digitizing ship.
+Maersk Line, for example, has installed IoT sensors on its 600 vessels for fuel economy enhancement, voyage optimization, container monitoring and empty container optimization. \cite{raza_digital_2023}. 
+%As volume of goods and vessels rises, efficient and cost-effectiveness operations but reducing environmental impact are now more critical than ever.
+
+The intelligent use of operational data of vessels plays a crucial role in transforming future maritime services.
+Operational data within the maritime sector is vast and varied, sourced from a multitude of
+sensors, cameras, radar, GPS, via digital communication technologies like analog signal, Ethernet, Wi-Fi and Bluetooth.
+As a result, the volume of global ship data has grown exponentially, reaching the scale of "big data,", but with limited standards.
+For instance, AIS data, a global standard for vessel tracking, is mandatory for ships over 2 tons.
+According to a study, MarineTraffic.com collected around 30 GB of AIS data daily in 2013, and this figure constantly increasing \cite{webdigitship}. 
+When OVD is effectively handled, any ship could serve as a mobile observation platform and provide a lot of valuable information for research in fields such as shipbuilding, meteorology and more.  
+
+
+Despite the potential of such data, the maritime industry faces a significant challenge: lack of universally shared standard for operational data across the marine transportation ecosystem, such as among fleet management systems. This is partly due to concerns about data privacy and lack of interoperability between different IT systems involved in the field of maritime logistics. Without a transparent data-processing framework shared among ship owners, the integration of operational vessel data sources will therefore take practitioners and researchers time and effort in data science tasks. 
+
+To address this challenge, this thesis introduces a data-processing framework for operational vessel data that can assimilate data from various data providers. 
+The framework, attached with its software, is designed to automatically acquire, clean and consolidate the data, which may exist in heterogeneous sources (e.g., files, XML, JSON, databases), and in different locations. It ensures that data from different locations and formats can be stored in a common database for a wide range of later analysis purposes. The proposed framework is expected to be able to automatically handle large volume of OVD from many vessels.
+Additionally, the framework is designed to be easy to understand, because it is based on well-established data science workflows. 
+\section{Problem statement}
+%\mtd{Define the specific problem your thesis is addressing. State the core problem and including problems regarding marine data processing.}
+%The proposed framework is designed to clarify and automate the process of working with  operational vessel data,  starting from data collection to data visualization. 
+Throughout a ship’s journey, operational vessel data plays a vital role in monitoring, managing, and optimizing vessel performance.
+The OVD, which this thesis deals with, is generated on board using a combination of low-, middle- and high-frequency sampling rates, using both automatic and manual methods. This results in complex, large-scale, and heterogeneous data, characterized by its time-series nature.
+
+In addition, OVD usually contains noisy, incomplete, or redundant information.
+\mtd{in construction...}
+
+\section{Objective and Contributions}
+%\mtd{Clarify the goals of your research and what it contributes to the field.}
+This thesis project is aim at designing and implementing a data-processing framework which can handle time-series operational vessel data.
+In the context of this thesis, the data-processing framework consists of a structural approach and a software system designed to efficiently manage, process, and analyze large volumes of data, enable the automation, and scaling data processing tasks.
+More specifically, the proposed data processing framework is capable of addressing the challenges in OVD processing by providing a complete and automated solution for all the four stages from data collection, data cleaning, data storage to data presentation.
+Furthermore, another objective is to conduct a comprehensive investigation into OVD datasets, in result, a database schema for OVD is developed, including common fields across different OVD datasets.
+
+
+One use case for the solution presented in its application in formalizing workflows involving OVD in maritime companies, particularly in data analysis scenarios. 
+Furthermore, maritime companies can apply the framework to simplify their internal processes of monitoring and optimizing fleet performance. 
+%or identifying patterns might go unnoticed in the report data.
+In general, the framework can accelerate the process of transforming raw data into meaningful insights. Researchers and analysts can utilize the framework to rapidly assess shipping operations across different metrics. 
+%\mtd{this para will be complete until 30.12.2024}
+
+\section{Outline}
+%\mtd{Briefly summarize each chapter to give the reader an overview of the document.}
+
+The rest of this document follows this structure: Section 2 outlines the related work. Section 3 describes the scope of this research and the requirements for the proposed solution. The design of the data-processing framework is presented in Section 4, supplemented with implementation. Section 5 discusses the results and evaluation. Finally, Section 6 concludes and further development.

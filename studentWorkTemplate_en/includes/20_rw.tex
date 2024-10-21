@@ -1,0 +1,72 @@
+\chapter{Related work}\label{chap:relatedwork}
+
+%\mtd{Here is the intro to the thesis context}
+
+The thesis presents in this section what is in background of the research topic of processing time-series OVD. Section 2.1 provides an introduction of operational vessel data, while section 2.2 give out its recent applications. 
+%Section 2.3 shows techniques to process OVD that people using to treat this data type.
+
+\section{Operational Vessel Data}
+
+Operational vessel data includes a rich variety of information collected during ship functioning. This data encompasses a wide range of metrics, from navigation details such as speed, heading, and position, to engine performance, fuel consumption, cargo weight, and weather conditions. It also includes data about .... 
+
+Data that is collected from vessel's operation, varies in collecting technology (radar, satellite, sensors), standards, saving formats. From our perspective, most fields in operational vessel data can be categorized into the following three groups:
+
+\begin{itemize}
+    \item \textbf{Sensor-based data}: is a combination of both low frequency, middle frequency data come from on-board sensors.
+        \begin{itemize}
+        \item low frequency: collected every 4 hours, this data is primarily used to report the current state of the vessel, such as performance, which is useful for high-level supervisors.
+        \item middle frequency: collected every 15 minutes, this data helps engineers continuously track the efficiency of ship operations, and drives decisions.
+        \item high frequency: collected every a second, is the data used to monitor critical components (such as engine's operational status). It allows for instant response to potential issues and provides predictive maintenance.
+        \end{itemize}
+    \item \textbf{Navigation data}: is managed by automatic identification system (AIS) is an automatic tracking system that contributes to the safety and continuous of marine traffic. AIS is a critical component so it is employed in majority of ships. There are two classes of AIS:
+        \begin{itemize}
+        \item class A: used by larger commercial vessels. Frequency: every 2 seconds to 3 minutes. 
+        \item class B: used by smaller vessels, including pleasure boats. Frequency: every 30 seconds to 3 minutes, depending on the system configuration.
+        \end{itemize}
+    \item \textbf{Noon report data}: is low-frequency data, it is manually sampled daily or before departure and after arrival, with uncertainty from logger.
+\end{itemize}
+        
+It is true that the amount of OVD is generated is huge and complex. In a cargo ship, there are 400 sensors installed on board. It is often saved on board and retrieved when the ship comes to shore or the real-time data will be send to offshore management via satelite internet.
+%Storing these complex information in a common database is a really challenge. To mitigate this tricky problem, the thesis proposed a  schema for operational vessel database to save these non-structured time-series data, the proposed schema and used database engine will be talk further in Design section.
+
+
+%\section{Storage of marine data}
+%\mtd{where is the data stored? how is the data stored? what does the data consist of (data structure)?}
+
+\section{Applications of OVD}
+\mtd{current state of the art in vessel data applications?}
+\mtd{what current motivations for your system requirements?}
+
+There are many existing applications on OVD in maritime industry. For example, live vessel map is a notable one \cite{liu_visualization_2021}, which leverages AIS data for vessel map analysis or vessel trajectory analysis.  Geometric algorithms are also used to enhance early collision predicting and assess the safety at a sailling area based on navigation data.
+Framework for Abnormal Vessel Trajectory Detection, as an example, are capable of detecting irregular vessel movements, which can indicate illegal fishing activities, or potential smuggling operations \cite{sidibe_big_2018}. Analysis for Ship Efficiency \cite{aldous_ship_nodate} uses , Framework for New  Vessel Design \cite{sullivan_prospective_2019} shows the effective of .
+
+In addition, there are several commercial frameworks used by by sailor crew and fleet managers to embrace OVD for real-time decision-support, maintenance advisor and others. 
+Complex systems, to name but a few Kongsberg K-IMS, integrated information points on ship to visualize onboard and onshore offices. 
+Marine Traffic, FleetMon, and VesselFinder are well-established third-party platforms, having their own framework to aggregate AIS data from multiple sources (both terrestrial and satellite) and provide real-time surveillance services of maritime traffic shipping companies, researchers, and the general public.
+
+
+In recent years, Marine IoT starts gaining attention from communities. For example, Architectures such as Fog Computing and Edge Computing are applied for accelerate IoT field on smart ship. 
+To name, Traxens is an active company providing smart container fleet management, allowing tracking containers' location, status, and condition in real time.
+
+  \mtd{why it motivates your requirement?}
+%Additionally, Big data processing frameworks are \cite{wang_big_2018}...
+
+%Despite these advances, there is limited research investing a practical processing framework for operational vessel data. This gap provides an opportunity for this thesis to propose a novel framework that emphasizes on customization and simplicity. The proposed framework can be integrated into internal workflow of companies and allows fleet data holders to easily ingest their data due to a common schema. This ensures greater interoperability and more efficient data processing.
+
+%\section{Data processing in OVD}
+%\mtd{current state of the art in data-processing OVD?}
+
+
+%To the best of our knowledge, none of the existing work on WSN–MCC integration considers the data traffic monitoring, filtering, prediction, compression, and encryption of sensory data before transmitting to the cloud. Our work is the first to consider all these tasks.
+
+\section{ Data-processing frameworks}
+\mtd{existing framework for OVD}
+
+There are two common data processing approaches: batch processing and stream processing. The batch processing approach is
+efficient in processing high volumes of data collected from time to time. On the other hand,
+the stream processing approach performs data processing with a small window of recent
+data at one time. This approach can be real-time or near-real-time when there are delays
+between the time of transaction and changes are propagated
+
+
+
